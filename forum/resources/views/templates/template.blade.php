@@ -2,12 +2,7 @@
 <html lang="pt-br">
 
 <head>
-
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-
   <title>Fórum - Esportes</title>
 
   <!-- Custom fonts for this template -->
@@ -20,11 +15,11 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <a class="navbar-brand">Esportes</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+            <span class="navbar-toggler-icon"></span>
+        </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item active">
@@ -42,19 +37,9 @@
     </nav>
 
     <div class="container">
-        <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-        <h1 class="display-4">Esportes</h1>
-        <p class="lead">Assuntos sobre esportes em geral.</p>
-        </div>
 
-        <div class="card mb-3">
-            <img class="card-img-top" src="img/tenis.jpg" alt="Card image cap">
-            <div class="card-body">
-                <h4 class="card-title">Titulo</h4>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                <p class="card-text"><small class="text-muted">Data: 12/12/2020</small></p>
-            </div>
-        </div>
+    @yield('content')
+
     </div>
 
     <footer class="pt-4 my-md-5 pt-md-5 border-top">
@@ -64,7 +49,6 @@
         </div>
         </div>
     </footer>
-    </div>
 
 </body>
 
