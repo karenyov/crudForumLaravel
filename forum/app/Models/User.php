@@ -41,8 +41,8 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function relNoticias()
+    public function noticias()
     {
-        return $this->hasMany('App\Models\Noticia', 'user_id');
+        return $this->hasMany(App\Models\Noticia::class, 'user_id');
     }
 }

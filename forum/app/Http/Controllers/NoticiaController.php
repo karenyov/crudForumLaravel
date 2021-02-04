@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\NoticiaRequest;
 use App\Models\Noticia;
 use App\Models\User;
 
@@ -37,7 +38,9 @@ class NoticiaController extends Controller
      */
     public function create()
     {
-        //
+        $users=$this->user->all();
+
+        return view('noticias/create', compact('users'));
     }
 
     /**
@@ -46,9 +49,16 @@ class NoticiaController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(NoticiaRequest $request)
     {
-        //
+        $new = $this->noticia->create([
+            'titulo' => $request->titulo,
+            'descricao' => $request->descricao,
+            'url' => $request->url,
+            'user_id' => $request->user_id
+        ]);
+
+        if ($new) return redirect('noticias');
     }
 
     /**
@@ -72,7 +82,9 @@ class NoticiaController extends Controller
      */
     public function edit($id)
     {
-        //
+        $noticia = $this->noticia->find($id);
+        $users = $this->user->all();
+        return view('noticias/create', compact('noticia', 'users'));
     }
 
     /**
@@ -82,9 +94,15 @@ class NoticiaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(NoticiaRequest $request, $id)
     {
-        //
+        $this->noticia->where(['id' => $id])->update([
+            'titulo' => $request->titulo,
+            'descricao' => $request->descricao,
+            'url' => $request->url,
+            'user_id' => $request->user_id
+        ]);
+        return redirect('noticias');
     }
 
     /**
@@ -95,6 +113,7 @@ class NoticiaController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $this->noticia->destroy($id);
+        return redirect('noticias');
     }
 }

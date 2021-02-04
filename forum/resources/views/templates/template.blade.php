@@ -16,7 +16,7 @@
 <body>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <a class="navbar-brand">Esportes</a>
+        <a class="navbar-brand"><i class="fa fa-futbol-o" aria-hidden="true"></i> Esportes</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -35,10 +35,10 @@
 
     </div>
 
-    <footer class="pt-4 my-md-5 pt-md-5 border-top">
+    <footer class="border-top">
         <div class="row">
-        <div class="col-12 col-md">
-            <small class="d-block mb-3 text-muted">© 2017-2018</small>
+        <div class="col-12 col-md" style="text-align:center; margin-top:5px;">
+            <small class="d-block mb-3 text-muted">Desenvolvido por: Karen Vicente</small>
         </div>
         </div>
     </footer>

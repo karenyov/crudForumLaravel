@@ -13,7 +13,7 @@
         <p class="card-text">
             <small class="text-muted">
                 @php
-                    $user=$noticia->find($noticia->id)->relUsers
+                    $user=$noticia->find($noticia->id)->user
                 @endphp
 
                 Data: {{ date('d/m/Y', strtotime($noticia->created_at)) }} -

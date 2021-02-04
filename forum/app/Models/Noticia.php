@@ -10,9 +10,10 @@ class Noticia extends Model
     use HasFactory;
 
     protected $table='noticia';
+    protected $fillable=['titulo', 'descricao', 'url', 'user_id'];
 
-    public function relUsers()
+    public function user()
     {
-        return $this->hasOne('App\Models\User', 'id');
+        return $this->belongsTo('App\Models\User','user_id', 'id');
     }
 }
