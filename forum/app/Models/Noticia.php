@@ -10,4 +10,9 @@ class Noticia extends Model
     use HasFactory;
 
     protected $table='noticia';
+
+    public function relUsers()
+    {
+        return $this->hasOne('App\Models\User', 'id');
+    }
 }

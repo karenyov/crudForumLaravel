@@ -10,7 +10,7 @@ Configurando Ambiente:
 
 ## Iniciando
 Instalar dependências:
-> Todos comandos executador na pasta raiz do projeto ("forum\") via terminal
+> Todos comandos executador na pasta raiz do projeto ("forum\") linha de comando:
 
 `composer install` 
 
@@ -22,3 +22,9 @@ Migrations:
 
 ## Subindo projeto
 `php artisan serve`
+
+> Criando Usuário Fake para teste
+`php artisan migrate --seed`
+
+npm run production
+

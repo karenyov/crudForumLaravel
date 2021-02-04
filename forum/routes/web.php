@@ -13,5 +13,4 @@ use App\Http\Controllers\NoticiaController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/',  [NoticiaController::class, 'index']);
+Route::resource('/noticias', NoticiaController::class);

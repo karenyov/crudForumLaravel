@@ -3,9 +3,22 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Noticia;
+use App\Models\User;
 
 class NoticiaController extends Controller
 {
+
+    private $user;
+    private $noticia;
+
+    public function __construct()
+    {
+
+        $this->user = new User();
+        $this->noticia = new Noticia();
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -13,7 +26,8 @@ class NoticiaController extends Controller
      */
     public function index()
     {
-        return view('index');
+        $noticias = $this->noticia->all();
+        return view('noticias/index', compact('noticias'));
     }
 
     /**
@@ -45,7 +59,9 @@ class NoticiaController extends Controller
      */
     public function show($id)
     {
-        //
+        $noticia = $this->noticia->find($id);
+        return view('noticias/show', compact('noticia'));
+
     }
 
     /**
