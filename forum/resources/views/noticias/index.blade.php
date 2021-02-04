@@ -43,6 +43,12 @@
     </div>
 </div>
 
+
 @endforeach
+<div class="d-flex">
+    <div class="mx-auto">
+    {{ $noticias->links("pagination::bootstrap-4") }}
+    </div>
+</div>
 
 @endsection

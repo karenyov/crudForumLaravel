@@ -27,7 +27,7 @@ class NoticiaController extends Controller
      */
     public function index()
     {
-        $noticias = $this->noticia->all();
+        $noticias = $this->noticia->paginate(5);
         return view('noticias/index', compact('noticias'));
     }
 

@@ -23,8 +23,10 @@ Migrations:
 ## Subindo projeto
 `php artisan serve`
 
-> Criando Usuário Fake para teste
-`php artisan migrate --seed`
+> Criando Registros para teste
+`php artisan db:seed`
 
 npm run production
+
+![alt tag](https://github.com/karenyov/crudForumLaravel/page-noticias)
 
