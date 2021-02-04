@@ -20,13 +20,11 @@ Instalar dependências:
 Migrations:
 `php artisan migrate` 
 
-## Subindo projeto
-`php artisan serve`
-
-> Criando Registros para teste
+Criando Registros para teste
 `php artisan db:seed`
 
-npm run production
+## Subindo projeto
+`php artisan serve`
 
 ![alt tag](https://github.com/karenyov/crudForumLaravel/page-noticias)
 
