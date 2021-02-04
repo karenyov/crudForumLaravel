@@ -26,5 +26,5 @@ Criando Registros para teste
 ## Subindo projeto
 `php artisan serve`
 
-![alt tag](https://github.com/karenyov/crudForumLaravel/page-noticias)
+![alt tag](https://github.com/karenyov/crudForumLaravel/blob/main/page-noticias.jpg)
 
